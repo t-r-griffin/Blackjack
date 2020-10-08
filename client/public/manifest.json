@@ -1,0 +1,31 @@
+{
+  "short_name": "Blackjack",
+  "name": "BlackJack",
+  "icons": [
+    {
+      "src": "card.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "card2.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "card3.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "card4.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}

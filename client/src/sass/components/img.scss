@@ -1,0 +1,19 @@
+.root {
+  max-width: calc(var(--maxWidth) * 1px);
+}
+
+.wrapper {
+  position: relative;
+  top: -20rem;
+  height: 0;
+  padding-top: calc(var(--height) / var(--width) * 100%);
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

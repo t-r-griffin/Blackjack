@@ -1,0 +1,214 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: grey;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    left: 6rem;
+    border-radius: 10%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    text-align: center;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-small) {
+      height: 4rem;
+      width: 4rem;
+      top: 2rem;
+      left: 2rem;
+    }
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 10%;
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    background-image: radial-gradient(#35654d, #35654d, #35654d);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @media only screen and (max-width: $bp-small) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &__nav {
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0rem;
+    z-index: 1500;
+    background-image: radial-gradient(#35654d, #35654d, #35654d);
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 190%;
+
+    @media only screen and (max-width: $bp-ipadpro) {
+      left: 70%;
+    }
+
+    @media only screen and (max-width: $bp-ipad) {
+      left: 75%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      left: 95%;
+    }
+
+    @media only screen and (max-width: $bp-iphonex) {
+      top: 40%;
+      left: 102%;
+    }
+
+    @media only screen and (max-width: 360px) {
+      left: 120%;
+    }
+
+    @media only screen and (max-width: $bp-iphone6) and (min-width: 400px) {
+      left: 98%;
+    }
+
+    @media only screen and (max-width: $bp-galaxys5) and (min-width: 351px) {
+      left: 105%;
+    }
+
+    @media only screen and (max-width: $bp-iphone5) and (min-width: 320px) {
+      left: 112%;
+    }
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      position: relative;
+      display: inline-block;
+      left: -20rem;
+      font-size: 3rem;
+      font-family: hermann;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: gold;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        white 150%
+      );
+      background-size: 220%;
+      transition: all 0.4s;
+
+      @media only screen and (max-width: $bp-ipadpro) and (min-width: $bp-ipad) {
+        font-size: 6rem;
+        margin-bottom: 8rem;
+      }
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+
+      transform: translateX(1rem);
+    }
+  }
+
+  //FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: white;
+      display: inline-block;
+
+      @media only screen and (max-width: $bp-small) {
+        width: 2rem;
+        height: 2px;
+        top: -1.6rem;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

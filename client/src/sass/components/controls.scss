@@ -1,0 +1,131 @@
+.redeal {
+  position: relative;
+  top: -13rem;
+
+  @media only screen and (max-width: $bp-small) {
+    top: -17rem;
+  }
+
+  @media only screen and (max-width: $bp-iphone5s) {
+    top: -12rem;
+  }
+}
+
+.button {
+  border-radius: 6rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: $color-gold;
+  border: 2px solid $color-black;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    background-color: yellow;
+  }
+
+  &-container {
+    display: grid;
+    position: relative;
+    top: -45rem;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5rem;
+    height: 20rem;
+    align-content: center;
+    justify-content: center;
+    grid-row-gap: 2rem;
+  }
+
+  &-item1 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  &-item2 {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+  }
+
+  &-item3 {
+    grid-column: 3 / 3;
+    grid-row: 1 / 1;
+  }
+}
+
+.buttonText {
+  color: white;
+  font-size: 1.2rem;
+  opacity: 1;
+
+  &__goodLuck {
+    animation: fadeOut forwards 3s;
+  }
+}
+
+.dealerScore {
+  color: white;
+  justify-self: center;
+  width: 75px;
+  border: solid 2px white;
+  position: relative;
+  margin-bottom: -8rem;
+  top: 1rem;
+  font-size: 1.6rem;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  border-radius: 10rem;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.instant {
+  animation: appear 4s linear;
+}
+
+.playerScore {
+  color: white;
+  width: 75px;
+  position: relative;
+  justify-self: center;
+  font-size: 1.6rem;
+  top: 5rem;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  border: solid 2px white;
+  border-radius: 10rem;
+  padding: 0 2rem;
+  background-color: #2c7da4;
+}
+.content {
+  color: white;
+  justify-self: center;
+  width: 150px;
+  position: absolute;
+  font-size: 1.6rem;
+  top: 11.5rem;
+  border: solid 2px white;
+  grid-row: 2/2;
+  grid-column: 1/1;
+
+  border-radius: 10rem;
+  padding: 0.3rem 2rem;
+  background-color: #2c7da4;
+}
+
+.center {
+  text-align: center;
+}
+
+.controls {
+  position: relative;
+  top: 30rem;
+  width: 80%;
+  height: 14rem;
+  display: inline-block;
+}
+
+.button:disabled {
+  color: white !important;
+  visibility: hidden;
+  background-color: #f44336 !important;
+}

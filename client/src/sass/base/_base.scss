@@ -1,0 +1,24 @@
+html,
+body #app,
+#app > div {
+  font-size: 62.5%;
+  height: 100vh;
+  background-image: radial-gradient(circle, #35654d, #35654d, #35654d);
+  padding: env(safe-area-inset);
+}
+
+body {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-ipadpro: 65rem;
+$bp-ipad: 48rem;
+$bp-small: 43.75rem;
+$bp-smallest: 60rem;
+$bp-iphone6: 41.4rem;
+$bp-iphonex: 37.5rem;
+$bp-galaxys5: 36rem;
+$bp-iphone5: 35rem;
+$bp-iphone5s: 32rem;

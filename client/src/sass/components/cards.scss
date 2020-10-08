@@ -1,0 +1,19 @@
+.image1 {
+  z-index: 2;
+}
+
+.image2 {
+  position: relative;
+  left: -7.5rem;
+  opacity: 0;
+
+  z-index: 1;
+}
+
+.faceUp {
+  animation: dealUp 0.75s linear;
+}
+
+.faceDown {
+  animation: dealDown 0.75s linear;
+}

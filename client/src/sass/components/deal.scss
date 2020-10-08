@@ -1,0 +1,125 @@
+.playgrid {
+  display: grid;
+  position: relative;
+  top: -40rem;
+  grid-column-gap: 1rem;
+  grid-template-columns: 1fr;
+  height: 25rem;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-iphone5s) and (min-width: $bp-iphone5s) and (max-height: 568px) and (min-height: 568px) {
+    top: -35rem;
+  }
+}
+
+.playgrid:nth-child(1) {
+  margin-top: -15rem;
+  margin-bottom: -5rem;
+
+  @media only screen and (max-width: $bp-iphone5s) and (min-width: $bp-iphone5s) {
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+  }
+  @media only screen and (max-width: $bp-iphone5s) and (min-width: $bp-iphone5s) and (max-height: 568px) and (min-height: 568px) {
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+  }
+}
+
+.playgrid:nth-child(2) {
+  margin-top: 6rem;
+
+  @media only screen and (max-width: $bp-iphone5s) and (min-width: $bp-iphone5s) and (max-height: 568px) and (min-height: 568px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.item-0 {
+  position: relative;
+  left: 2rem;
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+
+.item-1 {
+  left: 5rem;
+  text-align: center;
+  position: relative;
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+
+.item-2 {
+  left: 8rem;
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  text-align: center;
+}
+
+.item-3 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  text-align: center;
+  position: relative;
+  left: 11rem;
+}
+
+.item-4 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  left: 13rem;
+  text-align: center;
+}
+
+.item-5 {
+  text-align: center;
+  position: relative;
+  left: 15rem;
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+
+.item-6 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  text-align: center;
+  left: 17rem;
+}
+
+.item-7 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  text-align: center;
+  position: relative;
+  left: 19rem;
+}
+
+.item-8 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  left: 21rem;
+  text-align: center;
+  z-index: -1;
+}
+
+.item-9 {
+  text-align: center;
+  position: relative;
+  left: 23rem;
+  grid-row: 2/2;
+  grid-column: 1/1;
+  z-index: -2;
+}
+
+.item-10 {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  position: relative;
+  text-align: right;
+  left: 2rem;
+  z-index: -3;
+}
